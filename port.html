@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Portfolio of Aref Fares - Computer Science Graduate"
+  >
+
+  <title>
+    Aref Fares | Portfolio
+  </title>
+
+
+  <style>
+
+    /* =========================
+       GENERAL
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+
+    ul {
+      list-style-position: inside;
+    }
+
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+
+    section {
+      padding: 90px 0;
+    }
+
+
+    .title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+
+    .title span {
+      color: #38bdf8;
+    }
+
+
+    .subtitle {
+      text-align: center;
+      color: #94a3b8;
+      margin-bottom: 45px;
+    }
+
+
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.96);
+      border-bottom: 1px solid #334155;
+      z-index: 1000;
+    }
+
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 70px;
+    }
+
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+
+    .nav-links a {
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+
+    .menu-button {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+    }
+
+
+    .hero {
+      text-align: center;
+    }
+
+
+    .hero-small {
+      color: #38bdf8;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+
+    .hero h2 {
+      color: #cbd5e1;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+
+    .hero-location {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto 30px;
+      color: #94a3b8;
+      font-size: 17px;
+    }
+
+
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+
+    .btn:hover {
+      transform: translateY(-4px);
+      background: #0ea5e9;
+      box-shadow:
+        0 8px 20px
+        rgba(56, 189, 248, 0.25);
+    }
+
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+
+    .btn-outline:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about-box {
+      max-width: 850px;
+      margin: auto;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 35px;
+      text-align: center;
+    }
+
+
+    .about-box p {
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+
+
+    /* =========================
+       EDUCATION
+    ========================== */
+
+    .education-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 30px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+
+    .education-box:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+
+    .education-box h3 {
+      color: #38bdf8;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+
+    .education-box h4 {
+      margin-bottom: 8px;
+    }
+
+
+    .date {
+      color: #94a3b8;
+    }
+
+
+
+    /* =========================
+       EXPERIENCE
+    ========================== */
+
+    .experience-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 30px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+
+    .experience-box:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+
+    .experience-box h3 {
+      color: #38bdf8;
+      font-size: 22px;
+    }
+
+
+    .experience-box h4 {
+      margin: 6px 0;
+    }
+
+
+    .experience-box .date {
+      margin-bottom: 18px;
+    }
+
+
+    .experience-box ul {
+      padding-left: 10px;
+      color: #cbd5e1;
+    }
+
+
+    .experience-box li {
+      margin-bottom: 12px;
+    }
+
+
+
+    /* =========================
+       PROJECTS
+    ========================== */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(2, 1fr);
+      gap: 25px;
+    }
+
+
+    .project {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+
+    .project:hover {
+      transform: translateY(-8px);
+      border-color: #38bdf8;
+    }
+
+
+    .project-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+
+    .project h3 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+
+    .project p {
+      color: #cbd5e1;
+      margin-bottom: 15px;
+    }
+
+
+    .project ul {
+      color: #cbd5e1;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+
+    .project li {
+      margin-bottom: 10px;
+    }
+
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+
+    .tag {
+      background: #334155;
+      color: #7dd3fc;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+
+
+    /* =========================
+       CERTIFICATION
+    ========================== */
+
+    .certificate-box {
+      max-width: 700px;
+      margin: auto;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+
+    .certificate-box:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+
+    .certificate-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+
+    .certificate-box h3 {
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+
+
+    .certificate-box p {
+      color: #cbd5e1;
+    }
+
+
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(2, 1fr);
+      gap: 20px;
+    }
+
+
+    .skill {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+
+    .skill:hover {
+      transform: translateY(-7px);
+      border-color: #38bdf8;
+    }
+
+
+    .skill-icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+
+    .skill h3 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+
+    .skill p {
+      color: #cbd5e1;
+    }
+
+
+
+    /* =========================
+       LANGUAGES & HOBBIES
+    ========================== */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(2, 1fr);
+      gap: 25px;
+    }
+
+
+    .info-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+
+    .info-card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+    }
+
+
+    .info-card h3 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+
+    .info-card p {
+      color: #cbd5e1;
+      margin: 7px 0;
+    }
+
+
+
+    /* =========================
+       RESUME
+    ========================== */
+
+    .resume-box {
+      max-width: 800px;
+      margin: auto;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 40px;
+      text-align: center;
+    }
+
+
+    .resume-box p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-container {
+      display: grid;
+      grid-template-columns:
+        1fr 1fr;
+      gap: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+
+    .contact-info,
+    .contact-form {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 30px;
+    }
+
+
+    .contact-info h3,
+    .contact-form h3 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+
+    .contact-item {
+      margin-bottom: 22px;
+    }
+
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+
+    .contact-item a {
+      color: #38bdf8;
+      word-break: break-word;
+    }
+
+
+    .coming-soon {
+      color: #94a3b8;
+    }
+
+
+
+    /* =========================
+       CONTACT FORM
+    ========================== */
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+
+    input,
+    textarea {
+      padding: 14px;
+      border: 1px solid #475569;
+      border-radius: 8px;
+      background: #334155;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+
+    input:focus,
+    textarea:focus {
+      border-color: #38bdf8;
+    }
+
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #94a3b8;
+    }
+
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+
+    #formMessage {
+      color: #4ade80;
+      min-height: 20px;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+
+
+    /* =========================
+       SCROLL ANIMATION
+    ========================== */
+
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: #0f172a;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        display: none;
+
+        border-bottom:
+          1px solid #334155;
+      }
+
+
+      .nav-links.active {
+        display: flex;
+      }
+
+
+      .menu-button {
+        display: block;
+      }
+
+
+      .projects-grid,
+      .skills-grid,
+      .info-grid,
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+
+      .hero h2 {
+        font-size: 20px;
+      }
+
+
+      .title {
+        font-size: 31px;
+      }
+
+
+      section {
+        padding: 70px 0;
+      }
+
+
+      .project,
+      .skill,
+      .education-box,
+      .experience-box,
+      .certificate-box,
+      .about-box,
+      .contact-info,
+      .contact-form {
+        padding: 22px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav>
+
+  <div class="container navbar">
+
+    <a
+      href="#home"
+      class="logo"
+    >
+      Aref.
+    </a>
+
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+
+    <ul
+      class="nav-links"
+      id="navLinks"
+    >
+
+      <li>
+        <a href="#home">
+          Home
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#about">
+          About
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#education">
+          Education
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#experience">
+          Experience
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#projects">
+          Projects
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#skills">
+          Skills
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#contact">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HOME
+========================== -->
+
+<section id="home">
+
+  <div class="container hero fade">
+
+    <p class="hero-small">
+      Hello, I'm
+    </p>
+
+
+    <h1>
+
+      Aref
+      <span>
+        Fares
+      </span>
+
+    </h1>
+
+
+    <h2>
+
+      Computer Science Graduate |
+      Software Development,
+      Data Analysis & IT Support
+
+    </h2>
+
+
+    <div class="hero-location">
+
+      📍 Jezzine, Lebanon
+
+    </div>
+
+
+    <p>
+
+      Computer Science graduate with
+      experience in software development,
+      frontend development, data analysis,
+      networking and IT support.
+
+      I enjoy solving technical problems,
+      building user-friendly interfaces
+      and developing practical software
+      solutions.
+
+    </p>
+
+
+    <a
+      href="#projects"
+      class="btn"
+    >
+
+      View My Projects
+
+    </a>
+
+
+    <a
+      href="Aref Fares - CV.pdf"
+      download
+      class="btn btn-outline"
+    >
+
+      Download CV
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      About
+      <span>
+        Me
+      </span>
+
+    </h2>
+
+
+    <p class="subtitle fade">
+
+      My professional and technical
+      background.
+
+    </p>
+
+
+    <div class="about-box fade">
+
+      <p>
+
+        I am a Computer Science graduate
+        with interests and experience in
+        software development, data analysis,
+        frontend development, networking
+        and IT support.
+
+        My academic and practical work
+        has allowed me to develop skills
+        in programming, software engineering,
+        databases, networking, system design
+        and technical troubleshooting.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================== -->
+
+<section id="education">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      My
+      <span>
+        Education
+      </span>
+
+    </h2>
+
+
+    <p class="subtitle fade">
+
+      My academic background.
+
+    </p>
+
+
+    <div class="education-box fade">
+
+      <h3>
+        Bachelor of Science
+        in Computer Science
+      </h3>
+
+
+      <h4>
+        Lebanese University, Lebanon
+      </h4>
+
+
+      <p class="date">
+
+        October 2023 -
+        July 2026
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================== -->
+
+<section id="experience">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      My
+      <span>
+        Experience
+      </span>
+
+    </h2>
+
+
+    <p class="subtitle fade">
+
+      Practical professional experience.
+
+    </p>
+
+
+    <div class="experience-box fade">
+
+      <h3>
+
+        Frontend Development Intern
+
+      </h3>
+
+
+      <h4>
+
+        Code Alpha
+
+      </h4>
+
+
+      <p class="date">
+
+        August 2026 - Present
+
+      </p>
+
+
+      <ul>
+
+        <li>
+
+          Completing assigned frontend
+          development tasks focused on
+          translating requirements into
+          functional and user-friendly
+          web interfaces.
+
+        </li>
+
+
+        <li>
+
+          Applying core frontend
+          development concepts while
+          building, testing and refining
+          interface elements throughout
+          the internship.
+
+        </li>
+
+
+        <li>
+
+          Identifying and resolving
+          layout, functionality and
+          usability issues encountered
+          during development.
+
+        </li>
+
+
+        <li>
+
+          Following task requirements
+          and technical guidance while
+          independently researching
+          solutions and improving
+          assigned work.
+
+        </li>
+
+
+        <li>
+
+          Strengthening practical coding,
+          debugging, problem-solving
+          and attention-to-detail skills
+          through hands-on development.
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================== -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      My
+      <span>
+        Projects
+      </span>
+
+    </h2>
+
+
+    <p class="subtitle fade">
+
+      Technical projects from my CV.
+
+    </p>
+
+
+    <div class="projects-grid">
+
+
+      <!-- NETWORK PROJECT -->
+
+      <div class="project fade">
+
+        <div class="project-icon">
+          🌐
+        </div>
+
+
+        <h3>
+
+          Network Infrastructure &
+          Gateway Troubleshooting
+
+        </h3>
+
+
+        <ul>
+
+          <li>
+
+            Diagnosed and resolved
+            local broadband connectivity
+            issues through hands-on
+            gateway configuration
+            and network troubleshooting.
+
+          </li>
+
+
+          <li>
+
+            Configured gateway interfaces
+            and adjusted routing settings
+            to restore and maintain
+            reliable network connectivity.
+
+          </li>
+
+
+          <li>
+
+            Worked with cellular data
+            roaming networks including
+            Touch and Alfa to provide
+            alternative connectivity
+            and maintain service
+            availability.
+
+          </li>
+
+
+          <li>
+
+            Applied networking fundamentals,
+            routing concepts and security
+            practices while resolving
+            infrastructure issues.
+
+          </li>
+
+
+          <li>
+
+            Strengthened practical
+            troubleshooting skills by
+            identifying root causes and
+            implementing technical
+            solutions independently.
+
+          </li>
+
+        </ul>
+
+
+        <div class="tags">
+
+          <span class="tag">
+            Networking
+          </span>
+
+          <span class="tag">
+            Gateway Configuration
+          </span>
+
+          <span class="tag">
+            Routing
+          </span>
+
+          <span class="tag">
+            Troubleshooting
+          </span>
+
+          <span class="tag">
+            Network Security
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- AIRLINE PROJECT -->
+
+      <div class="project fade">
+
+        <div class="project-icon">
+          ✈️
+        </div>
+
+
+        <h3>
+
+          Airline Management System:
+          Software Requirements &
+          System Design
+
+        </h3>
+
+
+        <ul>
+
+          <li>
+
+            Developed a comprehensive
+            Software Requirements
+            Specification based on
+            standard Software Development
+            Life Cycle principles.
+
+          </li>
+
+
+          <li>
+
+            Analyzed and documented
+            functional and non-functional
+            system requirements.
+
+          </li>
+
+
+          <li>
+
+            Translated business and
+            user requirements into
+            structured software
+            specifications and system
+            documentation.
+
+          </li>
+
+
+          <li>
+
+            Designed UML Use Case
+            Diagrams, Class Diagrams
+            and Use Case Specifications
+            to model system architecture
+            and user interactions.
+
+          </li>
+
+
+          <li>
+
+            Collaborated with team
+            members to review requirements
+            and maintain consistency
+            across technical documentation
+            and system designs.
+
+          </li>
+
+        </ul>
+
+
+        <div class="tags">
+
+          <span class="tag">
+            SRS
+          </span>
+
+          <span class="tag">
+            SDLC
+          </span>
+
+          <span class="tag">
+            UML
+          </span>
+
+          <span class="tag">
+            System Analysis
+          </span>
+
+          <span class="tag">
+            System Design
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CERTIFICATION
+========================== -->
+
+<section id="certifications">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      My
+      <span>
+        Certification
+      </span>
+
+    </h2>
+
+
+    <p class="subtitle fade">
+
+      Professional certification
+      listed on my CV.
+
+    </p>
+
+
+    <div class="certificate-box fade">
+
+      <div class="certificate-icon">
+        📊
+      </div>
+
+
+      <h3>
+
+        Google Data Analytics
+        Professional Certificate
+
+      </h3>
+
+
+      <p>
+
+        Coursera
+
+      </p>
+
+
+      <p>
+
+        July 2025
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     TECHNICAL SKILLS
+========================== -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      Technical
+      <span>
+        Skills
+      </span>
+
+    </h2>
+
+
+    <p class="subtitle fade">
+
+      Technical skills listed
+      on my CV.
+
+    </p>
+
+
+    <div class="skills-grid">
+
+
+      <!-- PROGRAMMING -->
+
+      <div class="skill fade">
+
+        <div class="skill-icon">
+          💻
+        </div>
+
+
+        <h3>
+
+          Programming &
+          Development
+
+        </h3>
+
+
+        <p>
+
+          Python, Java, C++, C#,
+          C, Dart, PHP, JavaScript,
+          Assembly, Flutter, HTML5,
+          CSS3, Front-End Development
+          and GUI Development.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- SOFTWARE -->
+
+      <div class="skill fade">
+
+        <div class="skill-icon">
+          ⚙️
+        </div>
+
+
+        <h3>
+
+          Software Engineering &
+          Databases
+
+        </h3>
+
+
+        <p>
+
+          OOP, Data Structures &
+          Algorithms, SDLC,
+          System Analysis & Design,
+          UML, MySQL and DBMS.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- NETWORKING -->
+
+      <div class="skill fade">
+
+        <div class="skill-icon">
+          🌐
+        </div>
+
+
+        <h3>
+
+          Networking &
+          Systems
+
+        </h3>
+
+
+        <p>
+
+          Computer Networks,
+          Network Security,
+          Operating Systems,
+          Gateway Configuration
+          and Routing Protocols.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- TOOLS -->
+
+      <div class="skill fade">
+
+        <div class="skill-icon">
+          🛠️
+        </div>
+
+
+        <h3>
+
+          Tools &
+          Technologies
+
+        </h3>
+
+
+        <p>
+
+          Git, GitHub and ArcGIS.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     LANGUAGES & HOBBIES
+========================== -->
+
+<section id="more">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      More
+      <span>
+        About Me
+      </span>
+
+    </h2>
+
+
+    <p class="subtitle fade">
+
+      Languages and hobbies
+      listed on my CV.
+
+    </p>
+
+
+    <div class="info-grid">
+
+
+      <!-- LANGUAGES -->
+
+      <div class="info-card fade">
+
+        <h3>
+
+          🌍 Languages
+
+        </h3>
+
+
+        <p>
+
+          Arabic — Native
+
+        </p>
+
+
+        <p>
+
+          English — Work Proficiency
+
+        </p>
+
+
+        <p>
+
+          French — Work Proficiency
+
+        </p>
+
+      </div>
+
+
+
+      <!-- HOBBIES -->
+
+      <div class="info-card fade">
+
+        <h3>
+
+          🎯 Hobbies
+
+        </h3>
+
+
+        <p>
+
+          ♟️ Chess
+
+        </p>
+
+
+        <p>
+
+          ⚽ Sports
+
+        </p>
+
+
+        <p>
+
+          🎮 Gaming
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESUME
+========================== -->
+
+<section id="resume">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      My
+      <span>
+        Resume
+      </span>
+
+    </h2>
+
+
+    <div class="resume-box fade">
+
+      <p>
+
+        Download my CV to view
+        my complete education,
+        experience, projects,
+        certifications and skills.
+
+      </p>
+
+
+      <a
+        href="Aref Fares - CV.pdf"
+        download
+        class="btn"
+      >
+
+        Download My CV
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <h2 class="title fade">
+
+      Contact
+      <span>
+        Me
+      </span>
+
+    </h2>
+
+
+    <p class="subtitle fade">
+
+      Feel free to get in touch
+      with me.
+
+    </p>
+
+
+    <div class="contact-container">
+
+
+      <!-- CONTACT INFORMATION -->
+
+      <div class="contact-info fade">
+
+        <h3>
+
+          Contact Information
+
+        </h3>
+
+
+        <div class="contact-item">
+
+          <strong>
+
+            📧 Email
+
+          </strong>
+
+
+          <a
+            href="mailto:areffares263@gmail.com"
+          >
+
+            areffares263@gmail.com
+
+          </a>
+
+        </div>
+
+
+
+        <div class="contact-item">
+
+          <strong>
+
+            🔗 LinkedIn
+
+          </strong>
+
+
+          <a
+            href="https://www.linkedin.com/in/aref-fares-395357384"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            Aref Fares
+
+          </a>
+
+        </div>
+
+
+
+        <div class="contact-item">
+
+          <strong>
+
+            💻 GitHub
+
+          </strong>
+
+
+          <a
+            href="#"
+            id="githubLink"
+          >
+
+            GitHub - Coming Soon
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- CONTACT FORM -->
+
+      <div class="contact-form fade">
+
+        <h3>
+
+          Send a Message
+
+        </h3>
+
+
+        <form id="contactForm">
+
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+          >
+
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+          >
+
+
+          <textarea
+            id="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+
+
+          <button
+            type="submit"
+            class="btn"
+          >
+
+            Send Message
+
+          </button>
+
+
+          <p id="formMessage"></p>
+
+
+        </form>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  <p>
+
+    ©
+    <span id="year"></span>
+    Aref Fares.
+    All Rights Reserved.
+
+  </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+
+  /* =========================
+     AUTOMATIC YEAR
+  ========================== */
+
+  document.getElementById(
+    "year"
+  ).textContent =
+    new Date().getFullYear();
+
+
+
+  /* =========================
+     MOBILE MENU
+  ========================== */
+
+  const menuButton =
+    document.getElementById(
+      "menuButton"
+    );
+
+
+  const navLinks =
+    document.getElementById(
+      "navLinks"
+    );
+
+
+  menuButton.addEventListener(
+    "click",
+    function() {
+
+      navLinks.classList.toggle(
+        "active"
+      );
+
+    }
+  );
+
+
+  document
+    .querySelectorAll(
+      ".nav-links a"
+    )
+    .forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          navLinks.classList.remove(
+            "active"
+          );
+
+        }
+      );
+
+    });
+
+
+
+  /* =========================
+     SCROLL ANIMATION
+  ========================== */
+
+  const fadeElements =
+    document.querySelectorAll(
+      ".fade"
+    );
+
+
+  function showElements() {
+
+    fadeElements.forEach(
+      function(element) {
+
+        const position =
+          element
+          .getBoundingClientRect()
+          .top;
+
+
+        const screenHeight =
+          window.innerHeight;
+
+
+        if (
+          position <
+          screenHeight - 80
+        ) {
+
+          element.classList.add(
+            "show"
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    showElements
+  );
+
+
+  showElements();
+
+
+
+  /* =========================
+     CONTACT FORM
+  ========================== */
+
+  const contactForm =
+    document.getElementById(
+      "contactForm"
+    );
+
+
+  contactForm.addEventListener(
+    "submit",
+    function(event) {
+
+      event.preventDefault();
+
+
+      const name =
+        document
+        .getElementById("name")
+        .value.trim();
+
+
+      const email =
+        document
+        .getElementById("email")
+        .value.trim();
+
+
+      const message =
+        document
+        .getElementById("message")
+        .value.trim();
+
+
+      const formMessage =
+        document.getElementById(
+          "formMessage"
+        );
+
+
+      if (
+        name === "" ||
+        email === "" ||
+        message === ""
+      ) {
+
+        formMessage.textContent =
+          "Please fill in all fields.";
+
+        return;
+
+      }
+
+
+      const subject =
+        encodeURIComponent(
+          "Portfolio Contact from " +
+          name
+        );
+
+
+      const emailBody =
+        encodeURIComponent(
+
+          "Name: " +
+          name +
+
+          "\n\nEmail: " +
+          email +
+
+          "\n\nMessage:\n" +
+          message
+
+        );
+
+
+      formMessage.textContent =
+        "Opening your email app...";
+
+
+      window.location.href =
+
+        "mailto:areffares263@gmail.com" +
+
+        "?subject=" +
+        subject +
+
+        "&body=" +
+        emailBody;
+
+
+      contactForm.reset();
+
+    }
+  );
+
+
+
+  /* =========================
+     GITHUB PLACEHOLDER
+  ========================== */
+
+  const githubLink =
+    document.getElementById(
+      "githubLink"
+    );
+
+
+  githubLink.addEventListener(
+    "click",
+    function(event) {
+
+      if (
+        githubLink.getAttribute(
+          "href"
+        ) === "#"
+      ) {
+
+        event.preventDefault();
+
+        alert(
+          "GitHub profile coming soon."
+        );
+
+      }
+
+    }
+  );
+
+
+</script>
+
+
+</body>
+
+</html>
